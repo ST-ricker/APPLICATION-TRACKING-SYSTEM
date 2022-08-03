@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Admin</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='login.css')}}">
+  </head>
+  <body>
+
+        <a href="/"><img src="{{url_for('static',filename='shivark_logo.png')}}" alt="" class="imager"></a>
+      <div class="admintext">
+        <a href="/admin-login" class="admintext" style="color: #339D41">Admin</a>
+      </div>
+      <div class="recruitertext">
+        <a href="/recruiter-login" class="recruitertext">Recruiter</a>
+      </div>
+      <div class="interviewertext">
+        <a href="/interviewer-login" class="interviewertext">Interviewer</a>
+      </div>
+
+    <div class="login">
+      <h1>APPLICANT LOGIN</h1>
+      <form action="/login_admin" method="post">
+
+        <div class="inputter">
+          <input type="text" name="username" id="username"  required>
+          <label>Username</label>
+        </div>
+        <div class="inputter">
+          <input type="password"  name="password" id="password" required>
+          <label>Password</label>
+        </div>
+        <div class="passworder">
+          Forgot Password?
+          </div>
+          <input type="submit" value="Login">
+                                    <center>
+      <div class="msg" ><h3 style="color:RED"> {{ msg }} </h3></div>
+      <div class="attempt" ><h3 style="color:GREEN"> {{ attempt }} </h3></div>
+            </center>
+      </form>
+    </div>
+  </body>
+</html>
